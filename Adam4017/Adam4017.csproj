@@ -10,6 +10,8 @@
     <Company>CSoft</Company>
     <Description>Adam4017通讯协议</Description>
     <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/caoyiliang/Adam4017</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/caoyiliang/Adam4017</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
