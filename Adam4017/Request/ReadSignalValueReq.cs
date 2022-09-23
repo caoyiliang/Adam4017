@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using TopPortLib.Interfaces;
 
-namespace Adam4017.Request
+namespace Adam4017.Request;
+
+internal class ReadSignalValueReq : IByteStream
 {
-    internal class ReadSignalValueReq : IByteStream
+    private readonly string _addr = "01";
+    public ReadSignalValueReq(string addr)
     {
-        private readonly string _addr = "01";
-        public ReadSignalValueReq(string addr)
-        {
-            this._addr = addr;
-        }
+        this._addr = addr;
+    }
 
-        public byte[] ToBytes()
-        {
-            return Encoding.ASCII.GetBytes(ToString());
-        }
+    public byte[] ToBytes()
+    {
+        return Encoding.ASCII.GetBytes(ToString());
+    }
 
-        public override string ToString()
-        {
-            return $"#{_addr}\r";
-        }
+    public override string ToString()
+    {
+        return $"#{_addr}\r";
     }
 }
