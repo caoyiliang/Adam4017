@@ -68,6 +68,6 @@ public class Adam4017 : IAdam4017
     public async Task<List<decimal>?> ReadSignalValueAsync(string address = "01", int tryCount = 0, int timeOut = -1, CancellationTokenSource? cancelToken = null)
     {
         if (!_isConnect) throw new NotConnectedException();
-        return await ProcessUtils.ReTry(async () => (await _crowPort.RequestAsync(new ReadSignalValueReq(address), new Func<byte[], ReadSignalValueRsp>(rspByte => new ReadSignalValueRsp(rspByte)), timeOut, true)).RecData, tryCount, cancelToken);
+        return await ProcessUtils.ReTry(async () => (await _crowPort.RequestAsync<ReadSignalValueReq, ReadSignalValueRsp>(new ReadSignalValueReq(address), timeOut)).RecData, tryCount, cancelToken);
     }
 }
