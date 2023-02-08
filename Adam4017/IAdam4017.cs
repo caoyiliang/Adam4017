@@ -1,34 +1,9 @@
-﻿using Communication;
+﻿using ProtocolInterface;
 
 namespace Adam4017;
 
-public interface IAdam4017
+public interface IAdam4017 : IProtocol
 {
-    /// <summary>
-    /// 设备是否连接
-    /// </summary>
-    public bool IsConnect { get; }
-
-    /// <summary>
-    /// 打开串口
-    /// </summary>
-    Task OpenAsync();
-
-    /// <summary>
-    /// 关闭串口
-    /// </summary>
-    Task CloseAsync();
-
-    /// <summary>
-    /// 对端掉线
-    /// </summary>
-    event DisconnectEventHandler? OnDisconnect;
-
-    /// <summary>
-    /// 对端连接成功
-    /// </summary>
-    event ConnectEventHandler? OnConnect;
-
     /// <summary>
     /// 读信号量
     /// </summary>

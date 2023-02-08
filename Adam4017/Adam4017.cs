@@ -5,13 +5,14 @@ using Communication.Bus.PhysicalPort;
 using Communication.Exceptions;
 using LogInterface;
 using Parser.Parsers;
+using ProtocolInterface;
 using TopPortLib;
 using TopPortLib.Interfaces;
 using Utils;
 
 namespace Adam4017;
 
-public class Adam4017 : IAdam4017
+public class Adam4017 : IAdam4017, IProtocol
 {
     private static readonly ILogger _logger = Logs.LogFactory.GetLogger<Adam4017>();
     private readonly ICrowPort _crowPort;
