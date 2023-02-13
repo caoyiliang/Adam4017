@@ -13,7 +13,7 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<RepositoryUrl>https://github.com/caoyiliang/Adam4017</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/caoyiliang/Adam4017</PackageProjectUrl>
-		<Version>5.0.1</Version>
+		<Version>5.0.2</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="3.0.0" />
+		<PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="4.0.0" />
 	</ItemGroup>
 
 </Project>
