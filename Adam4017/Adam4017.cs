@@ -31,17 +31,17 @@ public class Adam4017 : IAdam4017, IProtocol
         _crowPort = new CrowPort(new TopPort(serialPort, new FootParser(Foot)), defaultTimeout);
         _crowPort.OnSentData += CrowPort_OnSentData;
         _crowPort.OnReceivedData += CrowPort_OnReceivedData;
-        _crowPort.OnConnect += _crowPort_OnConnect;
-        _crowPort.OnDisconnect += _crowPort_OnDisconnect;
+        _crowPort.OnConnect += CrowPort_OnConnect;
+        _crowPort.OnDisconnect += CrowPort_OnDisconnect;
     }
 
-    private async Task _crowPort_OnDisconnect()
+    private async Task CrowPort_OnDisconnect()
     {
         _isConnect = false;
         await Task.CompletedTask;
     }
 
-    private async Task _crowPort_OnConnect()
+    private async Task CrowPort_OnConnect()
     {
         _isConnect = true;
         await Task.CompletedTask;
