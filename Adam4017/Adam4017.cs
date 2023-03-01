@@ -49,13 +49,13 @@ public class Adam4017 : IAdam4017, IProtocol
 
     private async Task CrowPort_OnReceivedData(byte[] data)
     {
-        _logger.Trace($"Adam4017 Rec:<-- {data}");
+        _logger.Trace($"Adam4017 Rec:<-- {StringByteUtils.BytesToString(data)}");
         await Task.CompletedTask;
     }
 
     private async Task CrowPort_OnSentData(byte[] data)
     {
-        _logger.Trace($"Adam4017 Send:--> {data}");
+        _logger.Trace($"Adam4017 Send:--> {StringByteUtils.BytesToString(data)}");
         await Task.CompletedTask;
     }
 
