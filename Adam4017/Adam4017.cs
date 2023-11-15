@@ -16,7 +16,7 @@ public class Adam4017 : IAdam4017, IProtocol
 {
     private static readonly ILogger _logger = Logs.LogFactory.GetLogger<Adam4017>();
     private readonly ICrowPort _crowPort;
-    internal static readonly byte[] Foot = new byte[] { 0x0d };
+    internal static readonly byte[] Foot = [0x0d];
 
     private bool _isConnect = false;
     public bool IsConnect => _isConnect;

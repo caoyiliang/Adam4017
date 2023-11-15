@@ -5,7 +5,7 @@ namespace Adam4017.Response;
 
 internal class ReadSignalValueRsp
 {
-    public List<decimal> RecData { get; set; } = new();
+    public List<decimal> RecData { get; set; } = [];
 
     public ReadSignalValueRsp(byte[] rspBytes)
     {
