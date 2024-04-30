@@ -13,7 +13,7 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<RepositoryUrl>https://github.com/caoyiliang/Adam4017</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/caoyiliang/Adam4017</PackageProjectUrl>
-		<Version>8.0.3</Version>
+		<Version>8.0.4</Version>
 		<PackageReleaseNotes>更新依赖</PackageReleaseNotes>
 	</PropertyGroup>
 
@@ -25,7 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="8.1.0" />
+	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="8.1.4" />
 	</ItemGroup>
 
 </Project>
