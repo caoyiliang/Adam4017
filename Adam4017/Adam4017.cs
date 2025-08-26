@@ -20,7 +20,6 @@ public class Adam4017 : IAdam4017, IProtocol
     internal static readonly byte[] Foot = [0x0d];
     private bool _isConnect = false;
     public bool IsConnect => _isConnect;
-    public IParser Parser { get; } = new FootParser(Foot);
 
     /// <inheritdoc/>
     public event DisconnectEventHandler? OnDisconnect { add => _crowPort.OnDisconnect += value; remove => _crowPort.OnDisconnect -= value; }
@@ -29,7 +28,7 @@ public class Adam4017 : IAdam4017, IProtocol
 
     public Adam4017(SerialPort serialPort, int defaultTimeout = 5000)
     {
-        _crowPort = new CrowPort(new TopPort(serialPort, Parser), defaultTimeout);
+        _crowPort = new CrowPort(new TopPort(serialPort, new FootParser(Foot)), defaultTimeout);
         _crowPort.OnSentData += CrowPort_OnSentData;
         _crowPort.OnReceivedData += CrowPort_OnReceivedData;
         _crowPort.OnConnect += CrowPort_OnConnect;
