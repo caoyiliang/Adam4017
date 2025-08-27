@@ -4,7 +4,6 @@ using Communication;
 using Communication.Bus.PhysicalPort;
 using Communication.Exceptions;
 using LogInterface;
-using Parser.Interfaces;
 using Parser.Parsers;
 using ProtocolInterface;
 using TopPortLib;
