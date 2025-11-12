@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net9.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;net8.0;net9.0;net10.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>default</LangVersion>
@@ -13,7 +13,7 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<RepositoryUrl>https://github.com/caoyiliang/Adam4017</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/caoyiliang/Adam4017</PackageProjectUrl>
-		<Version>9.5.8</Version>
+		<Version>10.0.0</Version>
 		<PackageReleaseNotes>更新依赖</PackageReleaseNotes>
 	</PropertyGroup>
 
@@ -25,7 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="9.11.13" />
+	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="10.0.0" />
 	</ItemGroup>
 
 </Project>
