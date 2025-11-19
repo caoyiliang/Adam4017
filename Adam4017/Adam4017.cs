@@ -66,10 +66,17 @@ public class Adam4017 : IAdam4017, IProtocol
     }
 
     /// <inheritdoc/>
-    public Task OpenAsync() => _crowPort.OpenAsync();
+    public Task OpenAsync()
+    {
+        _isConnect = _crowPort.PhysicalPort.IsOpen;
+        return _crowPort.OpenAsync();
+    }
 
     /// <inheritdoc/>
-    public Task CloseAsync() => _crowPort.CloseAsync();
+    public async Task CloseAsync(bool closePhysicalPort)
+    {
+        if (closePhysicalPort) await _crowPort.CloseAsync();
+    }
 
     /// <inheritdoc/>
     public async Task<List<decimal>?> ReadSignalValueAsync(string address = "01", int tryCount = 0, int timeOut = -1, CancellationToken cancelToken = default)
