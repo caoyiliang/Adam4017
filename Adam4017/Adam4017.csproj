@@ -13,8 +13,8 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<RepositoryUrl>https://github.com/caoyiliang/Adam4017</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/caoyiliang/Adam4017</PackageProjectUrl>
-		<Version>10.0.2</Version>
-		<PackageReleaseNotes>修复485下的问题</PackageReleaseNotes>
+		<Version>10.0.4</Version>
+		<PackageReleaseNotes>依赖更新</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,7 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="10.0.1" />
+	  <PackageReference Include="CSoft.Protocol.ProtocolInterface" Version="10.0.3" />
 	</ItemGroup>
 
 </Project>
